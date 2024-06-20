@@ -33,7 +33,7 @@ if (isset($_GET['id'])) {
     echo "Error: User ID parameter is not set.";
     // OR
     // header("Location: default-page.php");
-    exit(); // Make sure to exit after redirection
+    exit(); 
 }
 ?>
 
@@ -63,28 +63,28 @@ if (isset($_GET['id'])) {
     </style>
 </head>
 <body class="bg-gray-100">
-    <div class="container mx-auto mt-8 px-4">
-        <div class="flex flex-wrap gap-2 p-6 bg-cover rounded-xl bg-center" id="bg-profile">
+    <div class="container px-4 mx-auto mt-8">
+        <div class="flex flex-wrap gap-2 p-6 bg-center bg-cover rounded-xl" id="bg-profile">
             <div>
                 <?php if (!empty($profile)) : ?>
-                    <img src="data:image/jpeg;base64,<?php echo base64_encode($profile); ?>" class="rounded-full w-40 h-40 object-cover object-center" alt="Foto Profil">
+                    <img src="data:image/jpeg;base64,<?php echo base64_encode($profile); ?>" class="object-cover object-center w-40 h-40 rounded-full" alt="Foto Profil">
                 <?php else : ?>
-                    <img src="../../img/user1.jpg" class="rounded-full w-40 h-40" alt="Image-Profile">
+                    <img src="../../img/user1.jpg" class="w-40 h-40 rounded-full" alt="Image-Profile">
                 <?php endif; ?>
             </div>
-            <div class="md:w-2/3  flex flex-col justify-center">
-                <h1 class="text-3xl font-semibold mb-2 text-white"><?php echo $username; ?></h1>
+            <div class="flex flex-col justify-center md:w-2/3">
+                <h1 class="mb-2 text-3xl font-semibold text-white"><?php echo $username; ?></h1>
                 <p class="text-gray-500 line-clamp-2"><?php echo $userBio; ?></p>
                 <div class="mt-4">
                     <!-- Tombol "Ikuti" untuk pengguna lain -->
-                    <!-- <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Bio</button> -->
+                    <!-- <button class="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">Bio</button> -->
                 </div>
             </div>
         </div>
 
         <div class="mt-8">
-            <h2 class="text-2xl font-semibold mb-4">Foto-foto Terbaru</h2>
-            <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 mt-4">
+            <h2 class="mb-4 text-2xl font-semibold">Foto-foto Terbaru</h2>
+            <div class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3 lg:grid-cols-4">
 
                 <!-- Proses tampil dan ambil gambar -->
                 <?php
@@ -102,7 +102,7 @@ if (isset($_GET['id'])) {
                         ?>
 
                         <!-- Gambar-gambar terbaru di sini -->
-                        <div class="rounded-lg p-2">
+                        <div class="p-2 rounded-lg">
                             <a href="../../detail.php/?id=<?php echo $id; ?>" class="cursor-pointer">
                                 <img src="<?= $imageSrc; ?>" alt="<?= $post['title']; ?>" class="w-full h-auto rounded-lg hover-scale">
                             </a>

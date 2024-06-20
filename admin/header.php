@@ -19,32 +19,31 @@ if (session_status() == PHP_SESSION_NONE) {
 <body>
     <div class="flex h-screen bg-gray-200">
         <!-- Sidebar -->
-        <div class="w-64 bg-gray-800 p-4">
-            <div class="text-white text-2xl font-semibold mb-6">
-                
+        <div class="w-64 p-4 bg-gray-800">
+            <div class="mb-6 text-2xl font-semibold text-white">
                 Admin Panel
             </div>
 
             <!-- Navigation Links -->
             <nav>
 
-                <a href="index.php" class="block py-2 px-4 text-white hover:bg-gray-700">Dashboard</a>
-                <a href="viewUser.php" class="block py-2 px-4 text-white hover:bg-gray-700">Users</a>
-                <a href="viewPost.php" class="block py-2 px-4 text-white hover:bg-gray-700">Post</a>
-                <a href="viewTransaction.php" class="block py-2 px-4 text-white hover:bg-gray-700">Transaction</a>
-                <a href="proses/logout.php" class="block py-2 px-4 text-white hover:bg-gray-700">Logout</a>
+                <a href="index.php" class="block px-4 py-2 text-white hover:bg-gray-700">Dashboard</a>
+                <a href="viewUser.php" class="block px-4 py-2 text-white hover:bg-gray-700">Users</a>
+                <a href="viewPost.php" class="block px-4 py-2 text-white hover:bg-gray-700">Post</a>
+                <a href="viewTransaction.php" class="block px-4 py-2 text-white hover:bg-gray-700">Transaction</a>
+                <a href="proses/logout.php" class="block px-4 py-2 text-white hover:bg-gray-700">Logout</a>
                 <!-- Add more navigation links as needed -->
             </nav>
         </div>
 
         <!-- Content -->
-        <div class="flex-1 flex flex-col overflow-hidden">
+        <div class="flex flex-col flex-1 overflow-hidden">
             <!-- Top Bar -->
-            <header class="bg-gray-700 p-4">
-                <div class="flex justify-between items-center">
+            <header class="p-4 bg-gray-700">
+                <div class="flex items-center justify-between">
                     <!-- Toggle Sidebar Button -->
                     <button id="toggle-sidebar" class="text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg>
                     </button>
@@ -54,7 +53,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     <div class="mr-2 text-white">
                             <?php echo $_SESSION['username'] ?>
                         </div>
-                        <img class="h-8 w-8 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Avatar">
+                        <img class="object-cover w-8 h-8 rounded-full" src="https://randomuser.me/api/portraits/women/10.jpg" alt="User Avatar">
                     </div>
                 </div>
             </header>

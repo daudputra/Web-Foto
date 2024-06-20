@@ -49,7 +49,7 @@
                             echo '<td class="px-4 py-2 border-b border-l border-r">' . $row['harga'] . '</td>';
                             echo '<td class="px-4 py-2 border-b border-l border-r">' . $row['stock'] . '</td>';
                             echo '<td class="px-2 py-2 border-b border-l border-r">' . $row['tags'] . '</td>';
-                            echo '<td class="px-4 py-2 border-b">
+                            echo '<td class="flex items-start gap-2 px-4 py-2 border-b">
                             <a class="px-2 py-1 text-white bg-red-500 rounded hover:bg-red-700" href="proses/deletePost.php?id=' . $row['id'] . '"><box-icon name="trash-alt" type="solid" color="#ffffff" ></box-icon></a>
                             <a class="px-2 py-1 text-white bg-green-500 rounded hover:bg-green-700" href="user/viewPostuser.php?id=' . $row['id'] . '"><box-icon name="paper-plane" color="#ffffff" ></box-icon></a>
                             </td>';
