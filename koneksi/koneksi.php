@@ -1,5 +1,5 @@
 <?php
-    $database = "dbWebFoto";
+    $database = "dbwebfoto";
     $server = "localhost";
     $user = "root";
     $password = "";
@@ -12,8 +12,9 @@
 
     if (!$conn) {
         die("Koneksi Gagal : " . mysqli_connect_error());
-    }else{
-    //    echo "<script>alert('Connected')</script>";
     }
+    // else{
+    //    echo "<script>alert('Connected')</script>";
+    // }
     return $conn;
 ?>

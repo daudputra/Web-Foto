@@ -32,7 +32,7 @@ if ($result) {
 
 <body>
     <div class="bg-white shadow-md">
-        <div class="container mx-auto flex justify-between items-center py-4 px-2">
+        <div class="container flex items-center justify-between px-2 py-4 mx-auto">
             <!-- Logo -->
             <div class="text-2xl font-semibold text-gray-800">
                 <a href="../WebFoto/">Logo</a>
@@ -40,8 +40,8 @@ if ($result) {
 
 
             <!-- Hamburger Icon -->
-            <div class="md:hidden justify-end flex items-center">
-                <a href="topup.php" class="text-sm text-gray-600 hover:text-black font-bold cursor-pointer"><?php echo $kredit; ?><i class="fa fa-credit-card mx-1"></i></a>
+            <div class="flex items-center justify-end md:hidden">
+                <a href="topup.php" class="text-sm font-bold text-gray-600 cursor-pointer hover:text-black"><?php echo $kredit; ?><i class="mx-1 fa fa-credit-card"></i></a>
                 <a href="account.php">
                     <button id="" class="text-gray-600 hover:text-gray-800">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 18">
@@ -59,8 +59,8 @@ if ($result) {
             </div>
 
             <!-- Navigation Menu (hidden on mobile) -->
-            <nav class="space-x-4 hidden md:flex">
-                <a href="../WebFoto/" class="text-gray-600 hover:text-gray-800">Home</a>
+            <nav class="hidden space-x-4 md:flex">
+                <a href="../Web-Foto" class="text-gray-600 hover:text-gray-800">Home</a>
                 <a href="explore.php" class="text-gray-600 hover:text-gray-800">Explore</a>
                 <a href="dashboard.php" class="text-gray-600 hover:text-gray-800">Dashboard</a>
                 <!-- <a href="#" class="text-gray-600 hover:text-gray-800">Discover</a> -->
@@ -68,13 +68,13 @@ if ($result) {
             </nav>
 
             <!-- Sign In / Sign Up Button (hidden on mobile) -->
-            <div class="space-x-4 hidden md:flex">
+            <div class="hidden space-x-4 md:flex">
 
                 <?php if (!isset($_SESSION['username'])) : ?>
-                    <a href="login.php" class="text-gray-600 hover:text-gray-800 font-bold py-2 px-4">Sign In</a>
-                    <a href="login.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Sign Up</a>
+                    <a href="login.php" class="px-4 py-2 font-bold text-gray-600 hover:text-gray-800">Sign In</a>
+                    <a href="login.php" class="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700">Sign Up</a>
                 <?php else : ?>
-                    <a href="topup.php" class="text-sm text-gray-600 hover:text-black font-bold cursor-pointer mt-1.5"><?php echo $kredit; ?><i class="fa fa-credit-card ml-1"></i></a>
+                    <a href="topup.php" class="text-sm text-gray-600 hover:text-black font-bold cursor-pointer mt-1.5"><?php echo $kredit; ?><i class="ml-1 fa fa-credit-card"></i></a>
                     <a href="account.php">
                         <button id="" class="text-gray-600 hover:text-gray-800">
                             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 18">
@@ -84,7 +84,7 @@ if ($result) {
                     </a>
                     <!-- dropdown menu  -->
                     <i id="dropdownIcon" class="fa fa-angle-down items-center mt-1.5 cursor-pointer" style="color: #000000;"></i>
-                    <div id="dropdownMenu" class="hidden absolute bg-white border rounded mt-10 px-5 pl-6 py-3 flex flex-col">
+                    <div id="dropdownMenu" class="absolute flex flex-col hidden px-5 py-3 pl-6 mt-10 bg-white border rounded">
                         <a href="account.php" class="mb-2">Profile</a>
                         <!-- <a href="#" class="mb-2">Favourite</a> -->
                         <a href="proses/logout.php" class="">Logout</a>
@@ -99,7 +99,7 @@ if ($result) {
     <div class="hidden md:hidden" id="mobileMenu">
         <!-- Mobile Menu (displayed when hamburger icon is clicked) -->
         <div class="bg-white shadow-md">
-            <div class="container mx-auto py-4 px-2">
+            <div class="container px-2 py-4 mx-auto">
                 <nav class="flex flex-col space-y-4">
                     <a href="../WebFoto/" class="text-gray-600 hover:text-gray-800">Home</a>
                     <a href="explore.php" class="text-gray-600 hover:text-gray-800">Explore</a>
@@ -107,10 +107,10 @@ if ($result) {
                     <a href="#" class="text-gray-600 hover:text-gray-800">Discover</a>
                     <a href="#" class="text-gray-600 hover:text-gray-800">Photos</a>
                 </nav>
-                <div class="pt-4 justify-center">
+                <div class="justify-center pt-4">
                     <?php if (!isset($_SESSION['username'])) : ?>
-                        <a href="login.php" class="text-gray-600 hover:text-gray-800 font-bold py-2">Sign In</a>
-                        <a href="login.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Sign Up</a>
+                        <a href="login.php" class="py-2 font-bold text-gray-600 hover:text-gray-800">Sign In</a>
+                        <a href="login.php" class="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700">Sign Up</a>
                     <?php else : ?>
                         <a href="account.php" class="text-gray-600 hover:text-gray-800">View Profile</a>
 

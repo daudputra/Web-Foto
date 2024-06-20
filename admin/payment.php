@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $paymentImage = $row['payment']; // Assuming 'payment' is the column name for the image file
+        $paymentImage = $row['payment']; 
 
         // Check if the image data is not empty
         if (!empty($paymentImage)) {
@@ -17,8 +17,8 @@ if (isset($_GET['id'])) {
             $base64Image = base64_encode($paymentImage);
 
             // Display the image
-            echo '<div class="container mx-auto p-4 mt-2">';
-            echo '<div class="bg-white p-4 rounded-lg max-w-screen max-h-screen shadow-md overflow-y-auto">';
+            echo '<div class="container p-4 mx-auto mt-2">';
+            echo '<div class="max-h-screen p-4 overflow-y-auto bg-white rounded-lg shadow-md max-w-screen">';
             echo '<img src="data:image/jpeg;base64,' . $base64Image . '" alt="Payment Image" class="object-cover object-center ">';
             echo '</div>';
             echo '</div>';
