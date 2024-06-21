@@ -94,12 +94,12 @@ ini_set('display_startup_errors', 1);
         <div class="logo">Explore More Image</div>
     </header> -->
 
-<form class="mb-8 mt-8" action="search.php" method="GET">
-<div class="container mx-auto bg-none py-4 px-4 mt-5">
+<form class="mt-8 mb-8" action="search.php" method="GET">
+<div class="container px-4 py-4 mx-auto mt-5 bg-none">
                     <form action="search.php" method="get">
-                    <div class="w-full md:w-1/2 mx-auto">
+                    <div class="w-full mx-auto md:w-1/2">
                         <div class="relative">
-                            <input type="text" name="search" class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Cari foto...">
+                            <input type="text" name="search" class="w-full py-2 pl-10 pr-4 border border-gray-400 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Cari foto...">
                             <div class="absolute top-0 left-0 flex items-center h-full pl-4">
                                 <svg class="text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a8 8 0 018 8m-2 0a4 4 0 014-4m-10 2a2 2 0 002 2m-2 0a2 2 0 002-2m7 10l5 5M7 7l-5 5" />
@@ -114,7 +114,7 @@ ini_set('display_startup_errors', 1);
         <div class="grid">
             <?php
             // Query untuk mengambil data gambar blob dari database
-            $sql = "SELECT id, image_path FROM posts";
+            $sql = "SELECT id, image_path FROM posts ORDER BY id DESC ";
             $result = $conn->query($sql);
 
             // Menampilkan gambar-gambar dari blob ke elemen HTML

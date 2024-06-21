@@ -8,15 +8,15 @@
 </head>
 <body class="bg-gray-100">
 
-<div class="container mx-auto p-4 mt-8">
-    <h1 class="text-2xl font-semibold mb-4">Unggah Gambar dengan Pratinjau</h1>
+<div class="container p-4 mx-auto mt-8">
+    <h1 class="mb-4 text-2xl font-semibold">Unggah Gambar dengan Pratinjau</h1>
 
     <!-- Formulir Unggah Gambar -->
-    <form id="form-gambar" action="../proses/post.php" method="POST" enctype="multipart/form-data" class="bg-white p-4 rounded-lg shadow-md">
+    <form id="form-gambar" action="../proses/post.php" method="POST" enctype="multipart/form-data" class="p-4 bg-white rounded-lg shadow-md">
         <!-- Pilih Gambar -->
         <div class="mb-4">
             <label for="gambar" class="block text-lg font-semibold">Pilih Gambar</label>
-            <input type="file" name="image" accept=".png, .jpg, .jpeg" id="gambar" class="border border-gray-300 p-2 rounded-md w-full">
+            <input type="file" name="image" accept=".png, .jpg, .jpeg" id="gambar" class="w-full p-2 border border-gray-300 rounded-md">
         </div>
 
         <!-- Pratinjau Gambar -->
@@ -28,23 +28,23 @@
         <!-- Title -->
         <div class="mb-4">
             <label for="title" class="block text-lg font-semibold">Title</label>
-            <input type="text" name="title" id="title" placeholder="Write Your Title..." class="border border-gray-300 p-2 rounded-md h-10 w-full">
+            <input type="text" name="title" id="title" placeholder="Write Your Title..." class="w-full h-10 p-2 border border-gray-300 rounded-md">
         </div>
 
         <!-- Harga -->
         <div class="mb-4">
             <label for="harga" class="block text-lg font-semibold">Harga</label>
-            <input type="number" name="harga" id="harga" placeholder="Amount a Price.." class="border border-gray-300 p-2 rounded-md h-10 w-full">
+            <input type="number" name="harga" id="harga" placeholder="Amount a Price.." class="w-full h-10 p-2 border border-gray-300 rounded-md">
         </div>
 
         <div class="mb-4">
             <label for="stock" class="block text-lg font-semibold">Stock</label>
-            <input type="number" name="stock" id="stock" placeholder="Stock.." class="border border-gray-300 p-2 rounded-md h-10 w-full">
+            <input type="number" name="stock" id="stock" placeholder="Stock.." class="w-full h-10 p-2 border border-gray-300 rounded-md">
         </div>
                 <!-- kategori  -->
                 <div class="mb-4">
             <label for="deskripsi" class="block text-lg font-semibold">Kategori</label>
-            <select name="kategori" id="kategori" class="border border-gray-300 p-2 rounded-md h-10 w-full">
+            <select name="kategori" id="kategori" class="w-full h-10 p-2 border border-gray-300 rounded-md">
                 <option value="Animal">Animals</option>
                 <option value="Food" selected>Food</option>
                 <option value="Nature">Nature</option>
@@ -52,6 +52,7 @@
                 <option value="Explore">Explore</option>
                 <option value="Vechile">Vehicle</option>
                 <option value="Desain">Desain</option>
+                <option value="Illustration">Illustration</option>
             </select>
         </div>
 
@@ -59,21 +60,21 @@
         <!-- Deskripsi Gambar -->
         <div class="mb-4">
             <label for="deskripsi" class="block text-lg font-semibold">Deskripsi</label>
-            <textarea name="description" id="deskripsi" placeholder="Write Your Image Descrption" class="border border-gray-300 p-2 rounded-md h-20 w-full"></textarea>
+            <textarea name="description" id="deskripsi" placeholder="Write Your Image Descrption" class="w-full h-20 p-2 border border-gray-300 rounded-md"></textarea>
         </div>
                 <!-- Tags -->
                 <div class="mb-4">
             <label for="tags" class="block text-lg font-semibold">Tags</label>
-            <input type="text" name="tags" placeholder="Tags..." id="tags" class="border border-gray-300 p-2 rounded-md h-10 w-full">
+            <input type="text" name="tags" placeholder="Tags..." id="tags" class="w-full h-10 p-2 border border-gray-300 rounded-md">
         </div>
 
         <!-- Tombol Unggah -->
-        <div class="mt-4 flex justify-center">
-<button type="button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-4" onclick="goBack()">
+        <div class="flex justify-center mt-4">
+<button type="button" class="px-4 py-2 mr-4 font-bold text-white bg-red-500 rounded-full hover:bg-red-700" onclick="goBack()">
     Close
 </button>
 
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            <button type="submit" class="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700">
                 Post
             </button>
         </div>
